@@ -85,7 +85,7 @@ def plot_theory_vs_practice(results, exact):
     theory = 100 / (3 * n**2)  
     mask = errors > 1e-15
     plt.loglog(n[mask], errors[mask], 'ro-', label='Фактическая погрешность', linewidth=2, markersize=6)
-    plt.loglog(n, theory, 'b--', label=f'Теоретическая оценка O(1/n²)', linewidth=2)
+    plt.loglog(n, theory, 'b--', label=f'Теоретическая оценка O(100/3n²)', linewidth=2)
 
     plt.xlabel('Количество отрезков n', fontsize=12)
     plt.ylabel('Погрешность', fontsize=12)
