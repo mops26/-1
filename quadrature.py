@@ -56,12 +56,10 @@ def compute_results():
         (f3, 0, 3, 'f3'),
     ]
 
-    # УБИРАЕМ 'f4' - его нет в functions!
     results = {
         'f1': {'mid': [], 'trap': [], 'simp': [], 'three': [], 'n': []},
         'f2': {'mid': [], 'trap': [], 'simp': [], 'three': [], 'n': []},
         'f3': {'mid': [], 'trap': [], 'simp': [], 'three': [], 'n': []}
-        # 'f4' удален!
     }
 
     print("Вычисляем интегралы...")
@@ -87,7 +85,3 @@ def compute_results():
 
 if __name__ == "__main__":
     res = compute_results()
-    print("\nКлючи в results:", res.keys())
-    print(f"Для f1: {len(res['f1']['n'])} значений")
-    print(f"Для f2: {len(res['f2']['n'])} значений")
-    print(f"Для f3: {len(res['f3']['n'])} значений")
