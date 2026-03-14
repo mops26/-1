@@ -82,7 +82,7 @@ def plot_theory_vs_practice(results, exact):
 
     n = np.array(results[key]['n'])
     errors = np.array([abs(v - exact_val) for v in results[key][method]])
-    theory = 20 / n ** 2
+    theory = 100 / (3 * n**2)  
     mask = errors > 1e-15
     plt.loglog(n[mask], errors[mask], 'ro-', label='Фактическая погрешность', linewidth=2, markersize=6)
     plt.loglog(n, theory, 'b--', label=f'Теоретическая оценка O(1/n²)', linewidth=2)
